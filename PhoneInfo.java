@@ -40,5 +40,8 @@ public class PhoneInfo {
             System.out.println( "생년월일 : " + this.getPhoneNumber() );
     }
 
+    int plus (int a, int b ) {
+        return a + b;
+    }
 
 }

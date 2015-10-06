@@ -38,6 +38,7 @@ public class PhoneInfo {
         System.out.println( "전화번호 : " + this.getPhoneNumber() );
         if ( this.getPhoneNumber() != null )
             System.out.println( "생년월일 : " + this.getPhoneNumber() );
+        System.out.println();
     }
 
     int plus (int a, int b ) {

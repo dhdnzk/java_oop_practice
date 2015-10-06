@@ -36,8 +36,9 @@ public class PhoneInfo {
     void getInfo() {
         System.out.println( "이름 : " + this.getName() );
         System.out.println( "전화번호 : " + this.getPhoneNumber() );
-        if ( this.getPhoneNumber() != null )
-            System.out.println( "생년월일 : " + this.getPhoneNumber() );
+        if ( this.getBirthday() != null ) {
+            System.out.println("생년월일 : " + this.getBirthday());
+        }
         System.out.println();
     }
 

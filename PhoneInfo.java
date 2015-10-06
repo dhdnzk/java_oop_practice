@@ -21,15 +21,15 @@ public class PhoneInfo {
         this.birthday = null;
     }
 
-    String getName () {
+    private String getName () {
         return this.name;
     }
 
-    String getPhoneNumber () {
+    private String getPhoneNumber () {
         return this.phoneNumber;
     }
 
-    String getBirthday () {
+    private String getBirthday () {
         return this.birthday;
     }
 

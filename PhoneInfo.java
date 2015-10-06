@@ -41,9 +41,4 @@ public class PhoneInfo {
         }
         System.out.println();
     }
-
-    int plus (int a, int b ) {
-        return a + b;
-    }
-
 }

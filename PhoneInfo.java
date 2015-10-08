@@ -49,12 +49,5 @@ public class PhoneInfo {
         }
         System.out.println();
     }
-
-    void setInfo ( String name, String phoneNumber, String birthday ) {
-        setName(name);
-        setPhoneNumber( phoneNumber );
-        setBirthday( birthday );
-    }
-
 }
 

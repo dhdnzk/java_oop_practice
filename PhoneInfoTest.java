@@ -17,24 +17,19 @@ public class PhoneInfoTest {
 
            switch ( keyboard.nextInt() ) {
                case 1:
-                    ScreenOut.askName();
-                    String name = keyboard.next();
-                    ScreenOut.askPhoneNumber();
-                    String phoneNumber = keyboard.next();
-                    ScreenOut.askBirthday();
-                    String birthday = keyboard.next();
-
-                    l1.addData( name, phoneNumber, birthday );
-
-
+                   ScreenOut.askName();
+                   String name = keyboard.next();
+                   ScreenOut.askPhoneNumber();
+                   String phoneNumber = keyboard.next();
+                   ScreenOut.askBirthday();
+                   String birthday = keyboard.next();
+                   l1.addData( name, phoneNumber, birthday );
                    break;
 
                case 2:
-
                    break;
 
                case 3:
-
                    break;
 
                case 4:

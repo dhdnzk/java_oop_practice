@@ -78,18 +78,18 @@ public class LinkedList {
             System.out.println("저장된 데이터가 하나도 없습니다.");
             return;
         }
-        Scanner sc = new Scanner( System.in );
+        Scanner keyboard = new Scanner( System.in );
 
         if ( Objects.equals( this.LFirst().getName(), name ) ) {
 
             System.out.print( "바꿀 번호 입력 : " );
-            this.cur.info.setPhoneNumber( sc.next());
+            this.cur.info.setPhoneNumber( keyboard.next());
         }
 
         while ( this.cur.next != null ) {
             if ( Objects.equals( this.LNext().getName(), name ) ) {
                 System.out.print( "바꿀 번호 입력 : " );
-                this.cur.info.setPhoneNumber( sc.next() );
+                this.cur.info.setPhoneNumber( keyboard.next() );
             }
         }
     }

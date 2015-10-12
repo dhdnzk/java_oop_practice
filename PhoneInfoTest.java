@@ -3,6 +3,7 @@ package java_oop_practice;
 import java.util.Scanner;
 /**
  * Created by DH on 15. 10. 6..
+ * Last modification 15.10.12..
  */
 public class PhoneInfoTest {
     public static void main (String[] args) {
@@ -11,16 +12,15 @@ public class PhoneInfoTest {
 
         while ( true ) {
            ScreenOut.showMenu();
-           choice = keyboard.nextInt();
 
-           switch ( choice ) {
+           switch ( keyboard.nextInt() ) {
                case 1:
                     ScreenOut.askName();
-                    String name = keyboard.nextLine();
+                    String name = keyboard.next();
                     ScreenOut.askPhoneNumber();
-                    String phoneNumber = keyboard.nextLine();
+                    String phoneNumber = keyboard.next();
                     ScreenOut.askBirthday();
-                    String birthday = keyboard.nextLine();
+                    String birthday = keyboard.next();
 
                     PhoneInfo p1 = new PhoneInfo( name, phoneNumber, birthday );
                     p1.getInfo();

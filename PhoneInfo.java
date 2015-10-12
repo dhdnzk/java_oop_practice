@@ -2,6 +2,7 @@ package java_oop_practice;
 
 /**
  * Created by DH on 15. 10. 6..
+ * Last modification 15.10.12...
  */
 public class PhoneInfo {
 

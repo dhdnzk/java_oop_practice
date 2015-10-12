@@ -9,8 +9,7 @@ public class PhoneInfoTest {
     public static void main (String[] args) {
         int choice;
         Scanner keyboard = new Scanner( System.in );
-        LinkedList l1 = new LinkedList();
-
+        LinkedList l1 = new LinkedList(); // 리스트 추가
 
         while ( true ) {
            ScreenOut.showMenu();
@@ -27,9 +26,15 @@ public class PhoneInfoTest {
                    break;
 
                case 2:
+                   System.out.print( "\n조회할 이름 입력 : " );
+                   ( l1.searchData( keyboard.next() ) ).getInfo();
+                   System.out.println( "입니다." );
                    break;
 
                case 3:
+                   System.out.print( "삭제할 이름 입력 : " );
+                   ( l1.delData( keyboard.next() ) ).getInfo();
+                    System.out.println( "삭제되었습니다." );
                    break;
 
                case 4:

@@ -1,5 +1,7 @@
 package java_oop_practice;
 
+import java.util.Objects;
+
 /**
  * Created by DH on 15. 10. 12..
  * Last modification 15. 10. 12..
@@ -11,7 +13,7 @@ public class LinkedList {
     Node before;
     int numOfData;
 
-    LinkedList (  ) {
+    LinkedList () {
         this.head = new Node();
         this.head.info = null;
         this.head.next = null;
@@ -37,31 +39,58 @@ public class LinkedList {
         }
     }
 
-
-
-/*
-    PhoneInfo delData ( String name ) {
+    PhoneInfo searchData ( String name ) {
         if ( this.numOfData == 0 ) {
             return null;
         }
 
+        if (Objects.equals(this.LFirst().getName(), name)) {
+            return this.cur.info;
+        }
 
-
-
+        while (this.cur.next != null) {
+            if (Objects.equals(this.LNext().getName(), name)) {
+                return this.cur.info;
+            }
+        }
+        return null; // 리스트 끝까지 탐색 후 못찾으면 null반환
     }
 
-    PhoneInfo searchData ( String name ) {
+    PhoneInfo delData ( String name ) {
+        if (this.numOfData == 0)
+            return null;
 
+        if (Objects.equals(this.LFirst().getName(), name)) {
+            PhoneInfo ret = this.cur.info;
+            this.before.next = this.cur;
+            this.cur = this.before;
+            this.numOfData --;
+            return ret;
+        }
+
+        while (this.cur.next != null) {
+            if (Objects.equals(this.LNext().getName(), name)) {
+                PhoneInfo ret = this.cur.info;
+                this.before.next = this.cur;
+                this.cur = this.before;
+                this.numOfData--;
+                return ret;
+            }
+        }
+        return null; // 리스트 끝까지 탐색 후 못찾으면 null반환
     }
 
     PhoneInfo LFirst () {
-
+        this.cur = this.head.next;
+        this.before = this.head;
+        return this.cur.info;
     }
 
     PhoneInfo LNext () {
-
+        this.before = this.cur;
+        this.cur = this.cur.next;
+        return this.cur.info;
     }
-    */
 }
 
 

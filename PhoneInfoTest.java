@@ -9,6 +9,8 @@ public class PhoneInfoTest {
     public static void main (String[] args) {
         int choice;
         Scanner keyboard = new Scanner( System.in );
+        LinkedList l1 = new LinkedList();
+
 
         while ( true ) {
            ScreenOut.showMenu();
@@ -22,11 +24,24 @@ public class PhoneInfoTest {
                     ScreenOut.askBirthday();
                     String birthday = keyboard.next();
 
-                    PhoneInfo p1 = new PhoneInfo( name, phoneNumber, birthday );
-                    p1.getInfo();
+                    l1.addData( name, phoneNumber, birthday );
+
+
                    break;
 
                case 2:
+
+                   break;
+
+               case 3:
+
+                   break;
+
+               case 4:
+                    l1.showAllData();
+                    break;
+
+               case 5:
                    System.out.println ( "terminate program." );
                    return;
            }

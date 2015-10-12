@@ -27,6 +27,8 @@ public class LinkedList {
         Node newNode = new Node( name, phoneNumber, birthday );
         this.tail.next = newNode;
         this.tail = newNode;
+        this.cur = null;
+        this.before = null;
         this.numOfData++;
     }
 
@@ -38,6 +40,8 @@ public class LinkedList {
             this.cur = this.cur.next;
             this.cur.info.getInfo( );
         }
+        this.cur = null;
+        this.before = null;
     }
 
     PhoneInfo searchData ( String name ) {

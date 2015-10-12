@@ -7,12 +7,14 @@ package java_oop_practice;
 public class ScreenOut {
 
     static void showMenu () {
-        System.out.println( "SELECT." );
-        System.out.println( "1. add Info." );
-        System.out.println( "2. search Info." );
-        System.out.println( "3. delete Info" );
-        System.out.println( "4. show all Info" );
-        System.out.println( "5. EXIT." );
+        System.out.println( "\nSELECT." );
+        System.out.println( "1. Add Info." );
+        System.out.println( "2. Search Info." );
+        System.out.println( "3. Delete Info" );
+        System.out.println( "4. Show all Info" );
+        System.out.println( "5. Screen clear." );
+        System.out.println( "6. EXIT." );
+
         System.out.print( "select : " );
     }
 
@@ -25,4 +27,11 @@ public class ScreenOut {
     static void askBirthday () {
         System.out.print("birthday : ");
     }
+
+    static void screenClear () {
+        for ( int i = 0; i < 80; i ++ ) {
+            System.out.println( "" );
+        }
+    }
 }
+

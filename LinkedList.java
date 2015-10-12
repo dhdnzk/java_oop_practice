@@ -12,6 +12,8 @@ public class LinkedList {
 
     LinkedList (  ) {
         this.head = new Node();
+        this.head.info = null;
+        this.head.next = null;
         this.tail = null;
         this.cur = null;
         this.before = null;
@@ -19,7 +21,7 @@ public class LinkedList {
     }
 
     void addData ( String name, String phoneNumber, String biorthday ) {
-        
+
 
 
     }

@@ -33,6 +33,7 @@ public class LinkedList {
     void showAllData () {
 
         this.cur = this.head;
+        System.out.println( "총 데이터 개수 : " + this.numOfData + "개" );
         while( this.cur.next != null ) {
             this.cur = this.cur.next;
             this.cur.info.getInfo( );
@@ -62,7 +63,7 @@ public class LinkedList {
 
         if (Objects.equals(this.LFirst().getName(), name)) {
             PhoneInfo ret = this.cur.info;
-            this.before.next = this.cur;
+            this.before.next = this.cur.next;
             this.cur = this.before;
             this.numOfData --;
             return ret;
@@ -71,7 +72,7 @@ public class LinkedList {
         while (this.cur.next != null) {
             if (Objects.equals(this.LNext().getName(), name)) {
                 PhoneInfo ret = this.cur.info;
-                this.before.next = this.cur;
+                this.before.next = this.cur.next;
                 this.cur = this.before;
                 this.numOfData--;
                 return ret;

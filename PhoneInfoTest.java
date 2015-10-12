@@ -29,7 +29,7 @@ public class PhoneInfoTest {
                     if( l1.numOfData != 0 ) {
                         System.out.print("\n조회할 이름 입력 : ");
                         try {
-                            l1.searchData(keyboard.next());
+                            l1.searchData(keyboard.next()).getInfo();
                             System.out.println("입니다.");
                         } catch (NullPointerException e) {
                             System.out.println("입력하신 데이터가 존재하지 않습니다.");
@@ -45,7 +45,7 @@ public class PhoneInfoTest {
                     if( l1.numOfData != 0 ) {
                         System.out.print("\n삭제할 이름 입력 : ");
                         try {
-                            l1.delData(keyboard.next());
+                            l1.delData(keyboard.next()).getInfo();
                             System.out.println("삭제되었습니다.");
                         } catch (NullPointerException e) {
                             System.out.println("입력하신 데이터가 존재하지 않습니다.");
@@ -73,7 +73,6 @@ public class PhoneInfoTest {
                         System.out.println ( "저장된 데이터가 하나도 없습니다." );
                     }
                     break;
-
 
                 case 5:
                     l1.showAllData();

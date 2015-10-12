@@ -50,4 +50,3 @@ public class PhoneInfo {
         System.out.println();
     }
 }
-

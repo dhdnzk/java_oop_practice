@@ -10,7 +10,8 @@ public class ScreenOut {
         System.out.println( "1. add Info." );
         System.out.println( "2. search Info." );
         System.out.println( "3. delete Info" );
-        System.out.println( "4. EXIT." );
+        System.out.println( "4. show all Info" );
+        System.out.println( "5. EXIT." );
         System.out.print( "select : " );
     }
 

@@ -7,9 +7,8 @@ import java.util.Scanner;
  */
 public class PhoneInfoTest {
     public static void main (String[] args) {
-        int choice;
         Scanner keyboard = new Scanner( System.in );
-        LinkedList l1 = new LinkedList(); // 리스트 추가
+        LinkedList l1 = new LinkedList();
 
         while ( true ) {
             ScreenOut.showMenu();

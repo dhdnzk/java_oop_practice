@@ -15,7 +15,6 @@ public class ScreenOut {
         System.out.println( "5. Show all Info" );
         System.out.println( "6. Screen clear." );
         System.out.println( "7. EXIT." );
-
         System.out.print( "select : " );
     }
 

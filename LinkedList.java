@@ -1,7 +1,7 @@
 package java_oop_practice;
 
 import java.util.Objects;
-
+import java.util.Scanner;
 /**
  * Created by DH on 15. 10. 12..
  * Last modification 15. 10. 12..
@@ -30,18 +30,6 @@ public class LinkedList {
         this.cur = null;
         this.before = null;
         this.numOfData++;
-    }
-
-    void showAllData () {
-
-        this.cur = this.head;
-        System.out.println( "총 데이터 개수 : " + this.numOfData + "개" );
-        while( this.cur.next != null ) {
-            this.cur = this.cur.next;
-            this.cur.info.getInfo( );
-        }
-        this.cur = null;
-        this.before = null;
     }
 
     PhoneInfo searchData ( String name ) {
@@ -85,6 +73,39 @@ public class LinkedList {
         return null; // 리스트 끝까지 탐색 후 못찾으면 null반환
     }
 
+    void modifyPhoneNumber ( String name ) {
+        if ( this.numOfData == 0 ) {
+            System.out.println("저장된 데이터가 하나도 없습니다.");
+            return;
+        }
+        Scanner sc = new Scanner( System.in );
+
+        if ( Objects.equals( this.LFirst().getName(), name ) ) {
+
+            System.out.print( "바꿀 번호 입력 : " );
+            this.cur.info.setPhoneNumber( sc.next());
+        }
+
+        while ( this.cur.next != null ) {
+            if ( Objects.equals( this.LNext().getName(), name ) ) {
+                System.out.print( "바꿀 번호 입력 : " );
+                this.cur.info.setPhoneNumber( sc.next() );
+            }
+        }
+    }
+
+    void showAllData () {
+
+        this.cur = this.head;
+        System.out.println( "총 데이터 개수 : " + this.numOfData + "개" );
+        while( this.cur.next != null ) {
+            this.cur = this.cur.next;
+            this.cur.info.getInfo( );
+        }
+        this.cur = null;
+        this.before = null;
+    }
+
     PhoneInfo LFirst () {
         this.cur = this.head.next;
         this.before = this.head;
@@ -97,7 +118,6 @@ public class LinkedList {
         return this.cur.info;
     }
 }
-
 
 class Node {
     PhoneInfo info;

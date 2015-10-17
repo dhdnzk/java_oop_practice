@@ -1,11 +1,8 @@
-package java_oop_practice;
+package phonebook;
 
 import java.util.Objects;
 import java.util.Scanner;
-/**
- * Created by DH on 15. 10. 12..
- * Last modification 15. 10. 12..
- */
+
 public class LinkedList {
     Node head;
     Node tail;
@@ -119,17 +116,3 @@ public class LinkedList {
     }
 }
 
-class Node {
-    PhoneInfo info;
-    Node next;
-
-    Node () {
-        this.info = null;
-        this.next = null;
-    }
-
-    Node (String name, String phoneNumber, String birthday ) {
-        info = new PhoneInfo( name, phoneNumber, birthday);
-        this.next = null;
-    }
-}

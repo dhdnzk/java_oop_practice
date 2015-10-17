@@ -1,4 +1,4 @@
-package java_oop_practice;
+package phonebook;
 
 /**
  * Created by DH on 15. 10. 6..

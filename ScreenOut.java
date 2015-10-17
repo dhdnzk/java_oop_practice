@@ -1,9 +1,5 @@
-package java_oop_practice;
+package phonebook;
 
-/**
- * Created by DH on 15. 10. 8..
- * Last modification 15. 10. 12..
- */
 public class ScreenOut {
 
     static void showMenu () {
@@ -19,18 +15,20 @@ public class ScreenOut {
     }
 
     static void askName () {
+
         System.out.print ( "name : " );
     }
+
     static void askPhoneNumber () {
         System.out.print( "phoneNumber : " );
     }
+
     static void askBirthday () {
         System.out.print("birthday : ");
     }
 
     static void screenClear () {
-        for ( int i = 0; i < 80; i ++ ) {
+        for ( int i = 0; i < 80; i ++ )
             System.out.println( "" );
-        }
     }
 }
